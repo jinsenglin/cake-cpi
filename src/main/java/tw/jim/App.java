@@ -1,6 +1,8 @@
 package tw.jim;
 
-import tw.jim.schema.CPIResponseMessage;
+import tw.jim.control.CPIProcessor;
+import tw.jim.model.CPIRequestMessage;
+import tw.jim.model.CPIResponseMessage;
 
 /**
  * BOSH CPI SPEC:
@@ -18,6 +20,9 @@ public class App
 	 */
     public static void main( String[] args )
     {
-        System.out.println( new CPIResponseMessage() );
+    	CPIRequestMessage _request_message = new CPIRequestMessage(args[0]);
+    	CPIProcessor _processor = new CPIProcessor(_request_message);
+    	CPIResponseMessage _response_message = _processor.getResponse();
+        System.out.println( _response_message );
     }
 }

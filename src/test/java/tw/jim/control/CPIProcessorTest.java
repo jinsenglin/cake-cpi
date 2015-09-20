@@ -1,27 +1,26 @@
-package tw.jim.schema;
+package tw.jim.control;
 
 import junit.framework.Test;
 import junit.framework.TestCase;
 import junit.framework.TestSuite;
 
-public class CPIResponseMessageTest extends TestCase {
+public class CPIProcessorTest extends TestCase {
 
 	/**
      * Create the test case
      *
      * @param testName name of the test case
      */
-    public CPIResponseMessageTest( String testName )
-    {
-        super( testName );
-    }
+	public CPIProcessorTest(String name) {
+		super(name);
+	}
 
     /**
      * @return the suite of tests being tested
      */
     public static Test suite()
     {
-        return new TestSuite( CPIResponseMessageTest.class );
+        return new TestSuite( CPIProcessorTest.class );
     }
     
     /**
@@ -31,5 +30,4 @@ public class CPIResponseMessageTest extends TestCase {
     {
         assertTrue( true );
     }
-
 }
